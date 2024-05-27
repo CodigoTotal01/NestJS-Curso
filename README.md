@@ -14,7 +14,7 @@
 docker-compose up -d
 ```
 
-6. Ejecutar SEED 
+6. Ejecutar SEED - Mapea datos a la base de datos
 ```
 http://localhost:3000/api/seed
 ```
