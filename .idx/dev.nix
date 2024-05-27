@@ -23,23 +23,22 @@
     extensions = [
       # "vscodevim.vim"
     ];
+# lsof -ti:3000 | xargs kill
 
     # Enable previews
-    previews = {
+previews = {
       enable = true;
       previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-       # command = ["yarn" "start:dev"];
-         #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
+        web = {
+          command = ["yarn" "start:dev"];
+          manager = "web";
+          env = {
+            HOST= "0.0.0.0";
+          };
+        };
       };
     };
+
 
     # Workspace lifecycle hooks
     workspace = {
