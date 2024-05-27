@@ -21,7 +21,7 @@ import { join } from 'path';
       password: process.env.DB_PASSWORD,
       autoLoadEntities: true,
       synchronize: true,
-      ssl: true, // For work with neon
+      //ssl: true, // For work with neon
     }),
 
     ServeStaticModule.forRoot({
