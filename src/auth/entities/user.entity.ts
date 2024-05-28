@@ -8,15 +8,19 @@ export class User {
   id: string;
 
 
-  @Column()
+  @Column('text', { unique: true })
   email: string;
 
+  @Column('text')
   password: string;
 
+  @Column('text')
   fullname: string;
 
+  @Column('bool', { default: true })
   isActive: boolean;
 
+  @Column('text', { array: true, default: ['user'] })
   roles: string[];
   
 }
